@@ -1,0 +1,32 @@
+{
+  "documentationUrl": "https://docs.airbyte.com/integrations/destinations/quotapath",
+  "supported_destination_sync_modes": ["overwrite", "append", "append_dedup"],
+  "supportsIncremental": true,
+  "supportsDBT": false,
+  "supportsNormalization": false,
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Destination Quotapath",
+    "type": "object",
+    "required": ["quotapathHost", "dataUpsertPath", "connectionTestPath", "apiKey"],
+    "additionalProperties": false,
+    "properties": {
+      "quotapathHost": {
+        "type": "string",
+        "description": "Host for QuotaPath app"
+      },
+      "dataUpsertPath": {
+        "type": "string",
+        "description": "Path to use for data upsert"
+      },
+      "connectionTestPath": {
+        "type": "string",
+        "description": "Path to use for connection test"
+      },
+      "apiKey": {
+        "type": "string",
+        "description": "Api key generated in QuotaPath app"
+      }
+    }
+  }
+}
